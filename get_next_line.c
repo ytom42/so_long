@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 15:28:33 by ytomiyos          #+#    #+#             */
-/*   Updated: 2021/12/24 15:28:46 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:30:54 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static int	ft_clean(int size, char **buffer, char **next_start)
 	return (0);
 }
 
-int			gnl(int fd, char **line)
+int	gnl(int fd, char **line)
 {
 	int			n;
 	int			size;
@@ -94,8 +94,11 @@ int			gnl(int fd, char **line)
 
 	if (ft_setup(fd, line, &buffer, &next_start) <= 0)
 		return (-1);
-	while (!next_start && (size = read(fd, buffer, 1)) > 0)
+	while (!next_start)
 	{
+		size = read(fd, buffer, 1);
+		if (!(size > 0))
+			break ;
 		if (ft_gnl(size, line, &buffer, &next_start) <= 0)
 			return (-1);
 	}

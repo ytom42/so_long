@@ -3,18 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 13:30:49 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 00:00:48 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:37:12 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// open, close, read, write,
-// printf, malloc, free, perror,
-// strerror, exit
-
-// magick convert [-depth 8 -colors 16 -background while] -resize 64x64 ~/Pictures/いらすとや/bandou.png bandou.xpm
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
@@ -29,8 +23,8 @@
 # include "minilibx_mms/mlx.h"
 # include "libft/libft.h"
 
-# define KeyPress 			2
-# define DestroyNotify		17
+# define KEYPRESS 			2
+# define DESTROYNOTIFY		17
 
 # define KEY_ESC			53
 # define KEY_W				13
@@ -43,7 +37,7 @@
 # define TEX_WIDTH			64
 # define TEX_HEIGHT			64
 
-typedef struct		s_img
+typedef struct s_img
 {
 	void			*img;
 	char			*addr;
@@ -52,7 +46,7 @@ typedef struct		s_img
 	int				endian;
 }					t_img;
 
-typedef struct		s_texture
+typedef struct s_texture
 {
 	void			*img;
 	char			*addr;
@@ -64,7 +58,7 @@ typedef struct		s_texture
 	int				height;
 }					t_texture;
 
-typedef struct		s_texs
+typedef struct s_texs
 {
 	t_texture			floor;
 	t_texture			wall;
@@ -75,15 +69,12 @@ typedef struct		s_texs
 
 typedef struct s_all
 {
-	// mlx
 	void	*mlx;
 	void	*win;
 	t_img	img;
 
-	// textures
 	t_texs	texs;
 
-	//vars
 	char	**map;
 	char	**fill_map;
 	int		move_n;
@@ -95,10 +86,13 @@ typedef struct s_all
 	int		screen_w;
 	int		screen_h;
 	char	*file_name;
+	int		map_x;
+	int		map_y;
 	int		tex_x;
 	int		tex_y;
 	int		map_w;
 	int		map_h;
+	int		map_blank;
 	bool	move;
 }				t_all;
 
@@ -125,6 +119,5 @@ void	*ft_malloc(t_all *s, int size);
 
 int		gnl(int fd, char **line);
 void	end(t_all *s, int n);
-
 
 #endif

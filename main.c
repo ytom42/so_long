@@ -30,15 +30,12 @@ int	main(int argc, char **argv)
 
 	vars_init(&s, argc);
 	map_load(argv[1], &s);
-	
 	window_init(&s);
 	texture_load(&s);
 	create_img(&s);
 	mlx_put_image_to_window(s.mlx, s.win, s.img.img, 0, 0);
-
-	mlx_hook(s.win, KeyPress, 0, push_key, &s);
-	mlx_hook(s.win, DestroyNotify, 0, close_window, &s);
+	mlx_hook(s.win, KEYPRESS, 0, push_key, &s);
+	mlx_hook(s.win, DESTROYNOTIFY, 0, close_window, &s);
 	mlx_loop(s.mlx);
-
 	return (0);
 }

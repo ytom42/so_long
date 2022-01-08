@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 13:28:41 by ytomiyos          #+#    #+#              #
-#    Updated: 2022/01/07 23:45:32 by ytomiyos         ###   ########.fr        #
+#    Updated: 2022/01/08 14:11:31 by ytomiyos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
-# CFLAGS	+=	-g3 -fsanitize=address -fsanitize=leak
+CFLAGS	+=	-g3 -fsanitize=address
 
 NAME	=	so_long
 
