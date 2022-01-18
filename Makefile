@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 13:28:41 by ytomiyos          #+#    #+#              #
-#    Updated: 2022/01/12 02:00:14 by ytomiyos         ###   ########.fr        #
+#    Updated: 2022/01/18 15:18:09 by ytomiyos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,12 @@ NAME	=	so_long
 
 LIBFT	=	./libft/libft.a
 
+MLXDIR	=	./minilibx_mms_20200219
+
+LIBMLX	=	$(MLXDIR)/libmlx.dylib
+
 SRCS	=	main.c \
-			error.c \
+			end.c \
 			map_load.c \
 			map_create.c \
 			map_check.c \
@@ -37,8 +41,7 @@ OBJS	=	$(SRCS:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(LIBFT) $(OBJS)
-			$(CC) $(CFLAGS) libmlx.dylib -o $@ $^
-# $(CC) $(CFLAGS) libmlx.dylib -framework OpenGL -framework AppKit -o $@ $^
+			$(CC) $(CFLAGS) $(LIBMLX) $^ -o $@
 
 $(LIBFT):
 			make -C ./libft
@@ -54,6 +57,3 @@ fclean:	clean
 re:		fclean all
 
 .PHONY:	all clean fclean re
-
-test:
-	$(CC) $(CFLAGS) -g libmlx.dylib $(LIBFT) -o $(NAME) $(SRCS)

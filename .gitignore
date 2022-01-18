@@ -4,5 +4,7 @@ so_long
 *.json
 *.log
 *.dSYM
+.DS_Store
 
 .vscode
+minilibx*

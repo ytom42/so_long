@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 13:30:49 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/12 02:00:14 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/18 15:18:36 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <string.h>
 # include <errno.h>
 # include <stdbool.h>
-# include "minilibx_mms/mlx.h"
+# include "mlx.h"
 # include "libft/libft.h"
 
 # define KEYPRESS 			2

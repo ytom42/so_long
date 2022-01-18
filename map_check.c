@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_check.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 16:00:11 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/11 20:00:29 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/18 13:06:05 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ static void	width_height_check(t_all *s)
 
 void	check_char(t_all *s)
 {
-	printf("p:%d c:%d e:%d\n", s->player_n, s->colle_n, s->exit_n);
 	if (s->player_n != 1)
 		end(s, 5);
 	else if (s->colle_n < 1)

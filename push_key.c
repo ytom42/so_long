@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_key.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 23:47:45 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/11 19:09:12 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/18 14:53:33 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	push_key(int keycode, t_all *s)
 {
 	s->move = false;
 	if (keycode == KEY_ESC)
-		exit(1);
+		end(s, -1);
 	else if (keycode == KEY_W)
 		move_up(s);
 	else if (keycode == KEY_S)

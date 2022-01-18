@@ -6,7 +6,7 @@
 /*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 17:07:19 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 19:06:39 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/18 16:19:27 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	skip_blank(t_all *s, int fd)
 	}
 }
 
-static void	char_n_count(t_all *s, int i)
+static void	char_number_count(t_all *s, int i)
 {
 	int		j;
 
@@ -61,7 +61,7 @@ void	map_create(t_all *s, char *filename)
 	{
 		gnl(fd, &line);
 		s->map[i] = line;
-		char_n_count(s, i);
+		char_number_count(s, i);
 		i++;
 	}
 	close(fd);
