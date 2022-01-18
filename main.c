@@ -12,10 +12,12 @@
 
 #include "so_long.h"
 
-void	vars_init(t_all *s, int argc)
+static void	vars_init(t_all *s, int argc)
 {
 	s->mlx = NULL;
 	s->win = NULL;
+	s->img.img = NULL;
+	s->img.addr = NULL;
 	s->move_n = 0;
 	s->player_n = 0;
 	s->colle_n = 0;
@@ -30,8 +32,7 @@ int	main(int argc, char **argv)
 
 	vars_init(&s, argc);
 	map_load(argv[1], &s);
-	window_init(&s);
-	texture_load(&s);
+	create_window(&s);
 	create_img(&s);
 	mlx_put_image_to_window(s.mlx, s.win, s.img.img, 0, 0);
 	mlx_hook(s.win, KEYPRESS, 0, push_key, &s);

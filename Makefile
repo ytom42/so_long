@@ -3,17 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+         #
+#    By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 13:28:41 by ytomiyos          #+#    #+#              #
-#    Updated: 2022/01/08 14:11:31 by ytomiyos         ###   ########.fr        #
+#    Updated: 2022/01/12 02:00:14 by ytomiyos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
-CFLAGS	+=	-g3 -fsanitize=address
 
 NAME	=	so_long
 
@@ -27,7 +26,7 @@ SRCS	=	main.c \
 			get_next_line.c \
 			push_key.c \
 			move.c \
-			window_init.c \
+			create_window.c \
 			texture_load.c \
 			create_img.c \
 			ft.c \

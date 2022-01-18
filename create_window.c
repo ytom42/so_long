@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   window_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 00:00:50 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 19:13:04 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/12 02:00:32 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	window_init(t_all *s)
+void	create_window(t_all *s)
 {
 	s->screen_w = s->map_w * 64;
 	s->screen_h = s->map_h * 64;

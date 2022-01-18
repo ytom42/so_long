@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 14:05:06 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 19:25:02 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/11 19:34:51 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void	end(t_all *s, int n)
 		write(2, "Error\nCan't open the file\n", 27);
 	else if (n == 7)
 		write(1, "Error\nmalloc error\n", 19);
+	else if (n == 8)
+		write(1, "Error\nThe map must be surrounded by walls\n", 42);
 	exit(1);
 }

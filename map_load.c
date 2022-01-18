@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_load.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 15:24:52 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 19:06:04 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/12 01:58:26 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	get_width(t_all *s, int fd)
 	while (gnl(fd, &line) > 0)
 	{
 		len = ft_strlen(line);
+		if (len > 256)
+			exit(1); //test
 		free(line);
 		if (len > 0)
 			return (len);
@@ -29,15 +31,13 @@ static int	get_width(t_all *s, int fd)
 	return (0);
 }
 
-static void	simple_check(t_all *s, char *line)
+static void	empty_line_check(t_all *s, char *line)
 {
 	int	len;
 
 	len = ft_strlen(line);
 	if (len > 0)
 		end(s, 2);
-	if (s->map_h < 3 || s->map_w < 3)
-		end(s, 1);
 }
 
 static void	get_width_height(t_all *s, char *filename)
@@ -59,13 +59,15 @@ static void	get_width_height(t_all *s, char *filename)
 			end(s, 2);
 		s->map_h += 1;
 	}
+	if (s->map_h > 256)
+		exit(1); //test
 	while (gnl(fd, &line) > 0)
 	{
 		len = ft_strlen(line);
 		if (len > 0)
 			end(s, 2);
 	}
-	simple_check(s, line);
+	empty_line_check(s, line);
 	close(fd);
 }
 

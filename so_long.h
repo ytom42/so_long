@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 13:30:49 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/08 19:37:12 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/12 02:00:14 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ typedef struct s_all
 	t_texs	texs;
 
 	char	**map;
-	char	**fill_map;
 	int		move_n;
 	int		player_x;
 	int		player_y;
@@ -104,7 +103,7 @@ void	map_check(t_all *s);
 void	flood_fill(t_all *s, int h, int w);
 int		close_window(t_all *s);
 
-void	window_init(t_all *s);
+void	create_window(t_all *s);
 void	texture_load(t_all *s);
 void	create_img(t_all *s);
 
