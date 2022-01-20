@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   end.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 14:05:06 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/19 11:23:08 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:04:13 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,24 @@ int	close_window(t_all *s)
 {
 	if (s->win != NULL)
 		mlx_destroy_window(s->mlx, s->win);
-	// system("leaks so_long");
+	system("leaks so_long");
 	exit(1);
+}
+
+void	map_free(t_all *s)
+{
+	int	i;
+
+	if (s->map != NULL)
+	{
+		i = 0;
+		while (i < s->map_h)
+		{
+			free(s->map[i]);
+			i++;
+		}
+		free(s->map);
+	}
 }
 
 void	end(t_all *s, int n)
@@ -42,5 +58,6 @@ void	end(t_all *s, int n)
 		printf("Error\nThe map must be surrounded by walls\n");
 	else if (n == 9)
 		printf("Error\nMap is too big\n");
+	map_free(s);
 	close_window(s);
 }

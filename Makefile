@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+         #
+#    By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 13:28:41 by ytomiyos          #+#    #+#              #
-#    Updated: 2022/01/18 17:14:37 by ytomiyos         ###   ########.fr        #
+#    Updated: 2022/01/20 12:07:56 by ytomiyos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRCS	=	main.c \
 			texture_load.c \
 			create_img.c \
 			ft.c \
-			tool1.c \
+			tool.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
