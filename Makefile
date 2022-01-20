@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+         #
+#    By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 13:28:41 by ytomiyos          #+#    #+#              #
-#    Updated: 2022/01/18 15:18:09 by ytomiyos         ###   ########.fr        #
+#    Updated: 2022/01/18 17:14:37 by ytomiyos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

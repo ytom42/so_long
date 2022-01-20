@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   end.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 14:05:06 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/18 14:57:07 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:23:08 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	close_window(t_all *s)
 {
 	if (s->win != NULL)
 		mlx_destroy_window(s->mlx, s->win);
+	// system("leaks so_long");
 	exit(1);
 }
 

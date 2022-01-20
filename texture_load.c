@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   texture_load.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ytomiyos <ytomiyos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 23:55:17 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/18 16:26:02 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:27:54 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	texture_load(t_all *s)
 {
+	s->mlx = mlx_init();
 	s->texs.floor.img = mlx_xpm_file_to_image(s->mlx, "./texture/floor.xpm", \
 		&s->texs.floor.width, &s->texs.floor.height);
 	s->texs.floor.addr = mlx_get_data_addr(s->texs.floor.img, \

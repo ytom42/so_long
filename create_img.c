@@ -6,7 +6,7 @@
 /*   By: ytomiyos <ytomiyos@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 00:56:38 by ytomiyos          #+#    #+#             */
-/*   Updated: 2022/01/15 13:06:29 by ytomiyos         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:24:52 by ytomiyos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	create_img(t_all *s)
 	int		window_x;
 	int		window_y;
 
-	texture_load(s);
 	window_x = 0;
 	window_y = 0;
 	while (window_y < s->screen_h)

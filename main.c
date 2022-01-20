@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 
 	vars_init(&s, argc);
 	map_load(argv[1], &s);
+	texture_load(&s);
 	create_window(&s);
 	create_img(&s);
 	mlx_put_image_to_window(s.mlx, s.win, s.img.img, 0, 0);
